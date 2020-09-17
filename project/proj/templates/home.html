@@ -7,4 +7,17 @@
 <p>
 {{ my_text }}
 </p>
+
+<ul>
+{% for my_sub_item in my_list %}
+    <li>
+    {% if my_sub_item == magic_number %}
+        even
+    {% else %}
+        odd
+    {% endif %}
+    {{ forloop.counter }} - {{ my_sub_item }} </li>
+{% endfor %}
+</ul>
+
 {% endblock %}
